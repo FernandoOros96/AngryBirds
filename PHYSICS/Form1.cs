@@ -31,7 +31,7 @@ namespace PHYSICS
         int BirdsNum = 0,finishGame=0;
         bool respawn=true, isBirdType2Added = false,isDuplicated=false,hasSpeed=false;
         int currentID;
-        int[] birdtype = { 2,2, 3,4 };
+        int[] birdtype = {2,2, 3,4 };
         private static Image background = birds.background;
 
         public Form1()
@@ -79,7 +79,7 @@ namespace PHYSICS
             balls[balls.Count - 1].setImage(birds.red);
             balls[balls.Count-1].setPinned(true);
 
-            VPoint pig = new VPoint(800, 386, balls.Count, 0);
+            VPoint pig = new VPoint(800, 390, balls.Count, 0);
             balls.Add(pig);
             balls[balls.Count-1].isPig= true;
             
@@ -88,7 +88,7 @@ namespace PHYSICS
             
 
 
-            balls.Add(new VPoint(900, 386, balls.Count, 0));
+            balls.Add(new VPoint(900, 390, balls.Count, 0));
             balls[balls.Count - 1].isPig = true;
             
             balls[balls.Count - 1].setImage(birds.pig);
@@ -383,7 +383,7 @@ namespace PHYSICS
                         (int)balls[currentID].Pos.X, (int)balls[currentID].Pos.Y+50,
                     balls.Count,-1);
                     egg.setBird(true);
-                    egg.setGravity(2);
+                    egg.setGravity(4);
                     egg.setMass(50f);
                     egg.isBomb = true;
                     
@@ -428,7 +428,7 @@ namespace PHYSICS
                 finishGame += 1;
                 respawn = false;
             }
-            if (finishGame >= 270)
+            if (finishGame >= 200)
             {
                 timer1.Stop();
                 var result = MessageBox.Show("GAME OVER. ¿Deseas continuar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -503,7 +503,7 @@ namespace PHYSICS
                 {
                     Air = true;
                 }
-                if(balls[bal].lifetime>200)
+                if(balls[bal].lifetime>100)
                 {
                     //resetear poder amarillo
                     balls[bal].Pos.X-= 0.95f;
@@ -523,7 +523,7 @@ namespace PHYSICS
                         executeMet = true;
                         int newId = balls.Count;
                         balls.Add(new VPoint(220, 350, newId, birdtype[index]));
-                        balls[newId].setGravity(0.0000009);
+                        balls[newId].setGravity(0.09);
                         switch (birdtype[index])
                         {
                             case 1:

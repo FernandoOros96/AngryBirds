@@ -38,9 +38,10 @@
             // 
             // PCT_CANVAS
             // 
-            this.PCT_CANVAS.Location = new System.Drawing.Point(6, 66);
+            this.PCT_CANVAS.Location = new System.Drawing.Point(5, 53);
+            this.PCT_CANVAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PCT_CANVAS.Name = "PCT_CANVAS";
-            this.PCT_CANVAS.Size = new System.Drawing.Size(1850, 912);
+            this.PCT_CANVAS.Size = new System.Drawing.Size(1644, 730);
             this.PCT_CANVAS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PCT_CANVAS.TabIndex = 0;
             this.PCT_CANVAS.TabStop = false;
@@ -52,7 +53,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 5;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
@@ -60,9 +61,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(84, 22);
+            this.label1.Location = new System.Drawing.Point(75, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 30);
+            this.label1.Size = new System.Drawing.Size(84, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "BIRDS:";
             // 
@@ -71,20 +72,21 @@
             this.NBirds.AutoSize = true;
             this.NBirds.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NBirds.Location = new System.Drawing.Point(186, 22);
+            this.NBirds.Location = new System.Drawing.Point(165, 18);
             this.NBirds.Name = "NBirds";
-            this.NBirds.Size = new System.Drawing.Size(28, 30);
+            this.NBirds.Size = new System.Drawing.Size(25, 26);
             this.NBirds.TabIndex = 6;
             this.NBirds.Text = "0";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1868, 944);
+            this.ClientSize = new System.Drawing.Size(1660, 755);
             this.Controls.Add(this.NBirds);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PCT_CANVAS);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
